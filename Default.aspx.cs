@@ -47,7 +47,6 @@ namespace Laboratorio__11
                 al.Dir = TextBox3.Text;
                 al.Fn = TextBox4.Text;
 
-                //crear el nuevo curso
                 Curso cu = new Curso();
                 cu.Nombre = TextBox5.Text;
                 cu.Nota = Convert.ToInt32(TextBox6.Text);
