@@ -16,8 +16,8 @@ namespace Laboratorio__11
         public string NC { get => nC; set => nC = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Dir { get => dir; set => dir = value; }
-        public List<Curso> C { get => c; set => c = value; }
         public string Fn { get => fn; set => fn = value; }
+        public List<Curso> C { get => c; set => c = value; }
 
         public Alumnos()
         {

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +12,7 @@ using WebGrease.Activities;
 namespace Laboratorio__11
 {
     public partial class _Default : Page
-    {
+    {   
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -56,6 +57,27 @@ namespace Laboratorio__11
                 uniN.Al.Add(al);
                 u.Add(uniN);
             }
+            else
+            {
+                int aux = 0; bool bl = true;
+                for(int i = 0; i < u.Count && bl; i++)
+                {
+                    if (DropDownList1.SelectedValue.Equals(u[i].Uni)) { aux = i; bl = false; }
+                }
+
+                Alumnos al = new Alumnos();
+                al.NC = TextBox1.Text;
+                al.Nombre = TextBox2.Text;
+                al.Dir = TextBox3.Text;
+                al.Fn = TextBox4.Text;
+
+                Curso cu = new Curso();
+                cu.Nombre = TextBox5.Text;
+                cu.Nota = Convert.ToInt32(TextBox6.Text);
+
+                al.C.Add(cu);
+                u[aux].Al.Add(al);
+            }
 
             Grabar(u);
         }
@@ -72,9 +94,9 @@ namespace Laboratorio__11
             return lista;
         }
 
-        private void Grabar(List<Universidad> universidades)
+        private void Grabar(List<Universidad> u)
         {
-            string json = JsonConvert.SerializeObject(universidades);
+            string json = JsonConvert.SerializeObject(u);
             string archivo = Server.MapPath("Datos.json");
             System.IO.File.WriteAllText(archivo, json);
         }
