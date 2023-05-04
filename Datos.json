@@ -1,1 +1,93 @@
-[{"Uni":"Mesoamericana","Al":[{"NC":"202208012","Nombre":"David Maldonado","Dir":"1ra calle","Fn":"17/09/2004","C":[{"Nombre":"Matematicas","Nota":98}]},{"NC":"202208014","Nombre":"Pedro Lopez","Dir":"2da calle","Fn":"18/04/1998","C":[{"Nombre":"Estructuras","Nota":94}]}]},{"Uni":"Landivar","Al":[{"NC":"202208013","Nombre":"Daniel Reyes","Dir":"3ra calle","Fn":"09/07/1999","C":[{"Nombre":"Fisica","Nota":83}]},{"NC":"202208015","Nombre":"Lucas Sinclair","Dir":"4ta calle","Fn":"13/12/2000","C":[{"Nombre":"Matematicas","Nota":91}]}]}]
+[
+  {
+    "Uni": "Mesoamericana",
+    "Al": [
+      {
+        "NC": "202208012",
+        "Nombre": "David Maldonado",
+        "Dir": "1ra calle",
+        "Fn": "17",
+        "C": [
+          {
+            "Nombre": "Matematicas",
+            "Nota": 83
+          },
+          {
+            "Nombre": "Fisica",
+            "Nota": 91
+          },
+          {
+            "Nombre": "Estructuras",
+            "Nota": 78
+          },
+          {
+            "Nombre": "Algebra lineal",
+            "Nota": 98
+          }
+        ]
+      },
+      {
+        "NC": "20",
+        "Nombre": "Daniel Reyes",
+        "Dir": "7ma calle",
+        "Fn": "12",
+        "C": [
+          {
+            "Nombre": "Matematicas",
+            "Nota": 98
+          },
+          {
+            "Nombre": "Estructuras",
+            "Nota": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Uni": "Landivar",
+    "Al": [
+      {
+        "NC": "202208013",
+        "Nombre": "Pedro Lopez",
+        "Dir": "4ta calle",
+        "Fn": "19",
+        "C": [
+          {
+            "Nombre": "Algebra lineal",
+            "Nota": 91
+          },
+          {
+            "Nombre": "Fisica",
+            "Nota": 94
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Uni": "San Carlos",
+    "Al": [
+      {
+        "NC": "12",
+        "Nombre": "Jose Perez",
+        "Dir": "10ma calle",
+        "Fn": "30",
+        "C": [
+          {
+            "Nombre": "Tecnicas de estudio",
+            "Nota": 100
+          },
+          {
+            "Nombre": "Fisica",
+            "Nota": 100
+          },
+          {
+            "Nombre": "Algebra lineal",
+            "Nota": 78
+          }
+        ]
+      }
+    ]
+  }
+]

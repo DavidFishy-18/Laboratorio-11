@@ -20,17 +20,28 @@ namespace Laboratorio__11
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Curso c = new Curso();
+            List<Curso> c = new List<Curso>();
 
-            c.Nombre = TextBox5.Text;
-            c.Nota = Convert.ToInt32(TextBox6.Text);
+            c = Leer2();
+
+            if (c == null) c = new List<Curso>();
+
+            Curso cu = new Curso();
+            cu.Nombre = TextBox5.Text;
+            cu.Nota = Convert.ToInt32(TextBox6.Text);
+
+            c.Add(cu);
+
+            Grabar2(c);
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             List<Universidad> u = new List<Universidad>();
+            List<Curso> c = new List<Curso>();
 
             u = Leer();
+            c = Leer2();
 
             if (u == null) u = new List<Universidad>();
 
@@ -48,11 +59,7 @@ namespace Laboratorio__11
                 al.Dir = TextBox3.Text;
                 al.Fn = TextBox4.Text;
 
-                Curso cu = new Curso();
-                cu.Nombre = TextBox5.Text;
-                cu.Nota = Convert.ToInt32(TextBox6.Text);
-
-                al.C.Add(cu);
+                al.C = c;
 
                 uniN.Al.Add(al);
                 u.Add(uniN);
@@ -71,15 +78,11 @@ namespace Laboratorio__11
                 al.Dir = TextBox3.Text;
                 al.Fn = TextBox4.Text;
 
-                Curso cu = new Curso();
-                cu.Nombre = TextBox5.Text;
-                cu.Nota = Convert.ToInt32(TextBox6.Text);
-
-                al.C.Add(cu);
+                al.C = c;
                 u[aux].Al.Add(al);
             }
 
-            Grabar(u);
+            Grabar(u); c.Clear(); Grabar2(c);
         }
 
         private List<Universidad> Leer()
@@ -98,6 +101,25 @@ namespace Laboratorio__11
         {
             string json = JsonConvert.SerializeObject(u);
             string archivo = Server.MapPath("Datos.json");
+            System.IO.File.WriteAllText(archivo, json);
+        }
+
+        private List<Curso> Leer2()
+        {
+            List<Curso> lista = new List<Curso>();
+            string archivo = Server.MapPath("Cursos.json");
+            StreamReader jsonStream = File.OpenText(archivo);
+            string json = jsonStream.ReadToEnd();
+            jsonStream.Close();
+            lista = JsonConvert.DeserializeObject<List<Curso>>(json);
+
+            return lista;
+        }
+
+        private void Grabar2(List<Curso> c)
+        {
+            string json = JsonConvert.SerializeObject(c);
+            string archivo = Server.MapPath("Cursos.json");
             System.IO.File.WriteAllText(archivo, json);
         }
     }
