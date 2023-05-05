@@ -5,7 +5,7 @@
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
             <h1 id="aspnetTitle">Registro de&nbsp; alumnos</h1>
-            <p class="lead">A continuacion debera de ingresar una lista de alumnos de una universidad con sus respectivas notas obtenidas.</p>
+            <p class="lead">A continuacion debera de ingresar alumnos de una universidad con sus respectivas notas obtenidas.</p>
             <p class="lead">Universidad&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:DropDownList ID="DropDownList1" runat="server">
                     <asp:ListItem>Mesoamericana</asp:ListItem>
