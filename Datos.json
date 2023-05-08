@@ -45,27 +45,6 @@
     ]
   },
   {
-    "Uni": "Landivar",
-    "Al": [
-      {
-        "NC": "202208013",
-        "Nombre": "Pedro Lopez",
-        "Dir": "4ta calle",
-        "Fn": "19",
-        "C": [
-          {
-            "Nombre": "Algebra lineal",
-            "Nota": 91
-          },
-          {
-            "Nombre": "Fisica",
-            "Nota": 94
-          }
-        ]
-      }
-    ]
-  },
-  {
     "Uni": "San Carlos",
     "Al": [
       {
